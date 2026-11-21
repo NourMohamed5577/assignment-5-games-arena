@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameArena - The Ultimate Gaming Experience</title>
+  <!-- خطوط Google (Chakra Petch للعناوين و Inter للنصوص) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- أيقونات FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- ملف التنسيق -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="page-wrapper">
+
+    <!-- 1. شريط التنقل العلوي (Navbar) -->
+    <header class="navbar">
+      <a href="#" class="logo">
+        <i class="fa-solid fa-gamepad"></i>
+        <span>GameArena</span>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </header>
+
+    <!-- 2. القسم الرئيسي (Hero Section) -->
+    <section class="hero-section">
+      <h1 class="hero-title">
+        THE ULTIMATE<br>
+        <span class="neon-text">GAMING</span><br>
+        EXPERIENCE
+      </h1>
+
+      <p class="hero-subtitle">
+        Join millions of gamers worldwide in the most competitive eSports tournaments. Experience next-level gaming with cutting-edge technology and endless possibilities.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#" class="btn btn-neon">Start Gaming Now</a>
+        <a href="#" class="btn btn-outline">Watch Tournaments</a>
+      </div>
+
+      <!-- بطاقة صورة السيت أب مع شارة اللاعبين -->
+      <div class="hero-showcase">
+        <div class="showcase-img-box">
+          <img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=800&auto=format&fit=crop&q=80" alt="Gaming Setup">
+        </div>
+        <div class="players-badge">
+          <div class="trophy-icon">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+          <div class="players-info">
+            <span>Active Players</span>
+            <strong>2.5M+</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. قسم أحدث الألعاب (Our Latest Games) -->
+    <section class="games-section">
+      <div class="section-tag">
+        <span class="line"></span>
+        <span>OUR GAMES</span>
+        <span class="line"></span>
+      </div>
+      <h2 class="section-title">Our Latest Games</h2>
+
+      <div class="game-slider">
+        <div class="game-card-featured">
+          <img src="https://images.unsplash.com/photo-1614728263952-84ea256f9679?w=800&auto=format&fit=crop&q=80" alt="Featured Game">
+        </div>
+
+        <div class="slider-controls">
+          <button class="circle-btn" aria-label="Previous"><i class="fa-solid fa-arrow-left"></i></button>
+          <button class="circle-btn" aria-label="Next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+        <a href="#" class="btn btn-outline full-btn">VIEW ALL GAMES</a>
+      </div>
+    </section>
+
+    <!-- 4. قسم خدماتنا (What We Do) -->
+    <section class="services-section">
+      <div class="section-tag">
+        <span class="line"></span>
+        <span>WHAT WE DO</span>
+        <span class="line"></span>
+      </div>
+      <h2 class="section-title">
+        More Than Just Games<br>
+        We Build <span class="neon-text">Interactive</span><br>
+        Journeys
+      </h2>
+
+      <div class="services-grid">
+        <!-- بطاقة 1 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-desktop"></i>
+          </div>
+          <h3>PC Game<br>Development</h3>
+        </div>
+
+        <!-- بطاقة 2 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-mobile-screen"></i>
+          </div>
+          <h3>Mobile Game<br>Development</h3>
+        </div>
+
+        <!-- بطاقة 3 (صورة نيون) -->
+        <div class="service-card image-card neon-card">
+          <img src="https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?w=500&auto=format&fit=crop&q=80" alt="Game Controllers">
+        </div>
+
+        <!-- بطاقة 4 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-vr-cardboard"></i>
+          </div>
+          <h3>AR/VR<br>Solutions</h3>
+        </div>
+
+        <!-- بطاقة 5 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-cubes"></i>
+          </div>
+          <h3>AR/VR<br>Design</h3>
+        </div>
+
+        <!-- بطاقة 6 (صورة شخصية نيون) -->
+        <div class="service-card image-card neon-card">
+          <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=500&auto=format&fit=crop&q=80" alt="Game Character">
+        </div>
+
+        <!-- بطاقة 7 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa-brands fa-playstation"></i>
+          </div>
+          <h3>Console<br>Development</h3>
+        </div>
+
+        <!-- بطاقة 8 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-cube"></i>
+          </div>
+          <h3>3D Game<br>Assets</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. قسم شعارات الفرق (Sponsors / Logos Strip) -->
+    <section class="logos-banner">
+      <div class="logos-row">
+        <div class="team-badge"><i class="fa-solid fa-bolt"></i><span>LTEM</span></div>
+        <div class="team-badge red-badge"><i class="fa-solid fa-shield-halved"></i><span>GAMING</span></div>
+        <div class="team-badge blue-badge"><i class="fa-solid fa-skull"></i><span>DOLORE</span></div>
+      </div>
+      <div class="logos-row">
+        <div class="team-badge red-badge"><i class="fa-solid fa-shield-halved"></i><span>GAMING</span></div>
+        <div class="team-badge blue-badge"><i class="fa-solid fa-skull"></i><span>DOLORE</span></div>
+        <div class="team-badge yellow-badge"><i class="fa-solid fa-headset"></i><span>HOODIE</span></div>
+      </div>
+    </section>
+
+    <!-- 6. قسم الفريق (Our Team) -->
+    <section class="team-section">
+      <div class="section-tag">
+        <span class="line"></span>
+        <span>OUR TEAM</span>
+        <span class="line"></span>
+      </div>
+      <h2 class="section-title large-title">
+        Our Best<br>
+        Team<br>
+        Members
+      </h2>
+      <p class="section-desc">
+        Meet the professional gamers and experts behind our success
+      </p>
+
+      <div class="team-cards">
+        <!-- لاعب 1 -->
+        <div class="player-card">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&auto=format&fit=crop&q=80" alt="Alex Phantom Chen">
+          <div class="player-overlay">
+            <div class="player-info">
+              <h3>Alex "Phantom" Chen</h3>
+              <p class="player-role">Pro Player - VALORANT</p>
+              <span class="player-award">World Champion 2023</span>
+            </div>
+            <span class="vertical-tag">PHANTOM</span>
+          </div>
+        </div>
+
+        <!-- لاعب 2 (ملون ونشط) -->
+        <div class="player-card active">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&auto=format&fit=crop&q=80" alt="Ali Nova Ahmed">
+          <div class="player-overlay">
+            <div class="player-info">
+              <h3>Ali "Nova" Ahmed</h3>
+              <p class="player-role">Pro Player - League of Legends</p>
+              <span class="player-award">MVP 2023 Season</span>
+            </div>
+            <span class="vertical-tag">NOVA</span>
+          </div>
+        </div>
+
+        <!-- لاعب 3 -->
+        <div class="player-card">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&auto=format&fit=crop&q=80" alt="Marcus Viper">
+          <div class="player-overlay">
+            <div class="player-info">
+              <h3>Marcus "Viper"</h3>
+              <p class="player-role">Pro Player - CS2</p>
+              <span class="player-award">Major Finalist 2023</span>
+            </div>
+            <span class="vertical-tag">VIPER</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>

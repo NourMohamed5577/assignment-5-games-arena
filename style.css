@@ -1,0 +1,468 @@
+/* المتغيرات والألوان الأساسية */
+:root {
+  --bg-dark: #0a0c0e;
+  --card-dark: #14171a;
+  --border-dark: #22272c;
+  --neon-green: #c4ff0e;
+  --neon-hover: #b2eb00;
+  --text-white: #ffffff;
+  --text-muted: #9ca3af;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.page-wrapper {
+  max-width: 480px;
+  margin: 0 auto;
+  background-color: var(--bg-dark);
+}
+
+/* 1. شريط التنقل (Navbar) */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  background-color: #0e1114;
+  border-bottom: 1px solid #1a1e23;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--neon-green);
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.logo i {
+  font-size: 22px;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: var(--text-white);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* 2. القسم الرئيسي (Hero Section) */
+.hero-section {
+  padding: 40px 20px 30px;
+  text-align: center;
+  background: radial-gradient(circle at top center, rgba(196, 255, 14, 0.08) 0%, transparent 60%);
+}
+
+.hero-title {
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.neon-text {
+  color: var(--neon-green);
+}
+
+.hero-subtitle {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  padding: 0 8px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 42px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 24px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.btn-neon {
+  background-color: var(--neon-green);
+  color: #0a0c0e;
+}
+
+.btn-neon:hover {
+  background-color: var(--neon-hover);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--neon-green);
+  border: 1.5px solid var(--neon-green);
+}
+
+.btn-outline:hover {
+  background-color: rgba(196, 255, 14, 0.1);
+}
+
+/* بطاقة السيت أب واللاعبين النشطين */
+.hero-showcase {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.showcase-img-box {
+  border: 2px solid var(--neon-green);
+  border-radius: 18px;
+  overflow: hidden;
+  height: 230px;
+  box-shadow: 0 0 25px rgba(196, 255, 14, 0.15);
+}
+
+.showcase-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.players-badge {
+  position: absolute;
+  bottom: -16px;
+  left: -6px;
+  background-color: #14171c;
+  border: 1px solid #262b33;
+  border-radius: 12px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  text-align: left;
+}
+
+.trophy-icon {
+  color: var(--neon-green);
+  font-size: 20px;
+}
+
+.players-info span {
+  display: block;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.players-info strong {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text-white);
+}
+
+/* عناوين الأقسام المشتركة */
+.section-tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.section-tag .line {
+  width: 28px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--neon-green));
+}
+
+.section-tag .line:last-child {
+  background: linear-gradient(90deg, var(--neon-green), transparent);
+}
+
+.section-tag span:not(.line) {
+  color: var(--neon-green);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.25;
+  margin-bottom: 28px;
+}
+
+/* 3. قسم أحدث الألعاب */
+.games-section {
+  padding: 40px 20px;
+}
+
+.game-card-featured {
+  border-radius: 18px;
+  overflow: hidden;
+  height: 290px;
+  margin-bottom: 22px;
+  border: 1px solid var(--border-dark);
+}
+
+.game-card-featured img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.circle-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1.5px solid #2b3138;
+  background-color: transparent;
+  color: var(--text-white);
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.circle-btn:hover {
+  border-color: var(--neon-green);
+  color: var(--neon-green);
+}
+
+.full-btn {
+  width: 100%;
+  letter-spacing: 1px;
+  font-size: 13px;
+}
+
+/* 4. قسم الخدمات (What We Do) */
+.services-section {
+  padding: 30px 20px 40px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.service-card {
+  background-color: var(--card-dark);
+  border: 1px solid var(--border-dark);
+  border-radius: 16px;
+  height: 165px;
+  padding: 20px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 14px;
+  transition: 0.25s ease;
+}
+
+.service-card:hover {
+  border-color: var(--neon-green);
+}
+
+.service-icon {
+  width: 48px;
+  height: 48px;
+  background-color: #1c2229;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--neon-green);
+  font-size: 20px;
+}
+
+.service-card h3 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--text-white);
+}
+
+.image-card {
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--neon-green);
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 5. شريط شعارات الفرق */
+.logos-banner {
+  padding: 30px 16px;
+  background: radial-gradient(circle at center, rgba(163, 230, 53, 0.35) 0%, var(--bg-dark) 75%);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow: hidden;
+}
+
+.logos-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.team-badge {
+  width: 105px;
+  height: 95px;
+  background-color: #151b26;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.team-badge i {
+  font-size: 26px;
+  color: var(--neon-green);
+}
+
+.red-badge { background: linear-gradient(135deg, #2a1215, #7f1d1d); }
+.red-badge i { color: #f87171; }
+
+.blue-badge { background: linear-gradient(135deg, #0f172a, #1e3a8a); }
+.blue-badge i { color: #a3e635; }
+
+.yellow-badge { background: linear-gradient(135deg, #18181b, #3f3f46); }
+.yellow-badge i { color: #facc15; }
+
+/* 6. قسم الفريق (Our Team) */
+.team-section {
+  padding: 40px 20px 60px;
+}
+
+.large-title {
+  font-size: 36px;
+  margin-bottom: 14px;
+}
+
+.section-desc {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 32px;
+  padding: 0 12px;
+}
+
+.team-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.player-card {
+  position: relative;
+  height: 310px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--border-dark);
+}
+
+.player-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(1.1);
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+/* البطاقة النشطة أو عند تمرير الماوس تظهر بالألوان */
+.player-card.active img,
+.player-card:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.03);
+}
+
+.player-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10, 12, 14, 0.92) 10%, rgba(10, 12, 14, 0.2) 60%, transparent 100%);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.player-info h3 {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--text-white);
+  margin-bottom: 4px;
+}
+
+.player-role {
+  font-size: 13px;
+  color: var(--neon-green);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.player-award {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.vertical-tag {
+  writing-mode: vertical-rl;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--neon-green);
+}
